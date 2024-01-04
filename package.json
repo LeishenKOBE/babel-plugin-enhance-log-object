@@ -5,12 +5,11 @@
   "main": "dist/babel-plugin-enhance-log-object.js",
   "scripts": {
     "clean": "rm -rf dist",
-    "dev": "webpack",
+    "dev": "webpack serve --mode development",
     "build": "webpack",
     "tag": "bumpp",
     "prepublishOnly": "npm run clean && npm run build",
-    "release": "npm publish",
-    "prepare": "husky install"
+    "release": "npm publish"
   },
   "repository": {
     "type": "git",
@@ -33,8 +32,7 @@
   "homepage": "https://github.com/LeishenKOBE/babel-plugin-enhance-log-object#readme",
   "dependencies": {
     "@babel/generator": "^7.21.4",
-    "@babel/helper-plugin-utils": "^7.20.2",
-    "lodash": "^4.17.21"
+    "@babel/helper-plugin-utils": "^7.20.2"
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",
@@ -43,9 +41,11 @@
     "babel-loader": "^9.1.2",
     "bumpp": "^9.1.0",
     "cz-conventional-changelog": "^3.3.0",
+    "html-webpack-plugin": "^5.6.0",
     "pnpm": "^8.3.1",
     "webpack": "^5.83.1",
-    "webpack-cli": "^5.1.1"
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.1"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
